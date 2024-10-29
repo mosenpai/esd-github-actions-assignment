@@ -1,0 +1,1 @@
+This repository contains the assignment for the GitHub Actions workshop 2024 for ESD.

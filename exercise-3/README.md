@@ -37,6 +37,10 @@ The goal of this step is to build the Java app using a job.
 > ```
 >as step before.
 
+- Go into `src/main/java/org/example/java/App.java` and write some non compiling Java code
+- Push it and observe what happens
+- After that, revert that change and ensure that it is compiling again
+
 ## Creating the verify job
 
 Now that the app is build, we need to verify the code.
@@ -54,6 +58,12 @@ Verify means running tests and checkstyle.
 - Run the tests with `./gradlew test`
 - Run the checkstyle with  `/gradlew checkstyleMain`
 - Upload the results as artifacts
+
+### Try breaking something
+
+- When the workflow succeeds, go into the `src/main/java/org/example/java/App.java` 
+- Capitalize `getGreeting` and push the changes. The verify step should fail now.
+- Revert the changes afterwards.
 
 ## Creating the publish job
 
